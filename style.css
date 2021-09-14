@@ -22,7 +22,7 @@ form {
     max-width: 95%;
     max-height: 100vh;
     margin: auto;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: auto;
     overflow-y: auto;
 }
@@ -56,7 +56,7 @@ form label {
 }
 
 form .half .item input {
-    border-radius: 5px;
+    /* border-radius: 5px; */
     border: 1px solid white;
     outline: 0;
     padding: 16px;
@@ -73,7 +73,7 @@ form .full {
 
 form .full textarea {
     background: transparent;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     border: 1px solid white;
     outline: 0;
     width: 100%;
@@ -90,7 +90,7 @@ form .action{
   
 form .action input{
     background: transparent;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     border: 1px solid white;
     cursor: pointer;
     font-size: 14px;
@@ -140,26 +140,10 @@ form .action input[type="submit"]:hover {
     }
 }
 
-.navbar-links ul{
-    display: flex;
-}
-
-.navbar-links li {
-    list-style: none;
-    margin: 12px 6px;
-    font-weight: 500;
-    font-size: 16px;
-
-}
-
-.navbar-links li a:hover {
-    background-color: #ffffff;
-    color: #262626;
-}
-
 .logo {
     padding-top: 12px;
     float: left;
+    font-size:calc(10px + 0.5vw);
 }
 
 .toggle-button {
@@ -176,10 +160,10 @@ form .action input[type="submit"]:hover {
 }
 
 .toggle-button .bar {
-    height: 4px;
-    width: 100%;
+    height: 1px;
+    width:90%;
     background: #ffffff;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 .cta-button {
@@ -187,19 +171,38 @@ form .action input[type="submit"]:hover {
     border-width: 1px;
     border-color: #ffffff;
     text-align: center;
-    padding: 8px 15px;
+    padding: 1.5% 2%;
     text-decoration: none;
     transition: 0.3s;
     transition-timing-function: ease-in-out;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    
+    padding: 1.5% 3%;
+    font-size:calc(10px + 0.4vw);
+    letter-spacing: 1.5px; 
 }
 
 .cta-button:hover {
     color: #262626;
     background-color: #ffffff;
+}
+
+
+.navbar-links ul{
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+    margin: 10px 6px;
+    font-weight: 500;
+    font-size:calc(10px + 0.5vw);
+
+}
+
+.navbar-links li a:hover {
+    background-color: #ffffff;
+    color: #262626;
 }
 
 #navbar .logo a, .navbar-links li a{
@@ -210,7 +213,8 @@ form .action input[type="submit"]:hover {
     text-decoration: none;
     transition: 0.3s;
     transition-timing-function: ease-in-out;
-    border-radius: 30px;
+    border: none;
+    /* border-radius: 30px; */
 }
 
 #navbar {
@@ -223,6 +227,8 @@ form .action input[type="submit"]:hover {
     padding: 0 3%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    letter-spacing: 2px;
+    z-index: 2;
 }
 
 #landing {
@@ -232,17 +238,53 @@ form .action input[type="submit"]:hover {
     background: #262626;
 }
 
+#landing-text {
+    margin-bottom: 3%;
+}
+
 #landing #particles-js {
     width: 100%;
     height: 100vh;
 }
 
-#landing #landing-content {
+#landing #landing-content #landing-col1{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 350px;
     transform: translate(-50%,-50%);
+    text-align: left;
+    white-space: nowrap;
 }
+
+#t1 {
+    /* font-size: 1.3vw; */
+    font-size:calc(12px + 0.4vw);
+}
+
+#t2 {
+    font-size:calc(28px + 1.5vw);
+}
+
+#t3 {
+    font-size:calc(42px + 1.5vw);
+}
+
+#landing #landing-content #landing-col2{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+}
+
+#landing #landing-logo {
+    font-size: 5vw;
+}
+
+#landing #landing-line-height {
+    line-height: 0.95;
+}
+
 
 #about {
     justify-content: center;
@@ -306,11 +348,10 @@ footer {
 
     .navbar-links li{
         margin: 3px 2px;
-    
     }
+
     .navbar-links li a{
         padding: 3px 20px;
-    
     }
 
     .navbar-links li:last-child {
@@ -326,11 +367,42 @@ footer {
 
     .navbar-links.active {
         display: flex;
-        
     }
+
 }
 
-@media (max-width: 500px){
+@media screen and (max-width: 767px) {
+    #landing #landing-content #landing-col2{
+        display: none;
+    }
+
+    #landing #landing-content #landing-col1{
+        left: 50%; 
+        line-height: 1.5; 
+    }
+
+    #landing-text {
+        margin-bottom: 1%;
+    }
+
+}
+
+@media screen and (max-width: 475px) {
+    #landing #landing-content #landing-col2{
+        display: none;
+    }
+
+    #landing #landing-content #landing-col1{
+        white-space: normal;
+        line-height: 1; 
+    }
+    #landing-text {
+        margin-bottom: 5px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
 
     form {
         padding: 25px 15px;
