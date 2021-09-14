@@ -77,11 +77,37 @@
 
             <!--CONTACT SECTION-->
             <section id="contact">
-                <h1>Contact</h1>
+                <form action="">
+                    <div class="title">
+                        <h1>CONTACT</h1>
+                    </div>
+                    
+                    <div class="half">
+                        <div class="item">
+                            <label for="name">NAME</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="item">
+                            <label for="email">EMAIL</label>
+                            <input type="text" name="email" id="email">
+                        </div>
+                    </div>
+                    <div class="full">
+                        <label for="message">MESSAGE</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="action">
+                        <input type="submit" value="SEND MESSAGE">
+                        <input type="button" id="status" class="success" value= "MESSAGE SENT" readonly hidden >
+                    </div>
+                </form>
             </section>
 
             <!--FOOTER-->
             <footer>
+                <div class="icons">
+                    3:41
+                </div>
                 <p>&copy; jk i didn't copyright this | 2021 | made with &hearts;</p>
             </footer>
         </main>
