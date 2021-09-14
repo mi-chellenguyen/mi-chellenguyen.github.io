@@ -6,6 +6,7 @@
     box-sizing: border-box;
 
     /* font-family: 'Playfair Display', serif; */
+    /* font-family: 'Montserrat', sans-serif; */
 }
 
 section {
@@ -61,6 +62,7 @@ form .half .item input {
     height: 44px;
     background: transparent;
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 form .full {
@@ -77,6 +79,7 @@ form .full textarea {
     padding: 12px 16px;
     font-size: 16px;
     resize: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 form .action{
