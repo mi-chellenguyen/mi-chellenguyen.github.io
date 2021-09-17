@@ -143,7 +143,7 @@ form .action input[type="submit"]:hover {
 .logo {
     padding-top: 12px;
     float: left;
-    font-size:calc(10px + 0.5vw);
+    font-size: clamp(10px, 1.4vw, 16px);
 }
 
 .toggle-button {
@@ -178,7 +178,7 @@ form .action input[type="submit"]:hover {
     /* border-radius: 30px; */
     font-family: 'Montserrat', sans-serif;
     padding: 1.5% 3%;
-    font-size:calc(10px + 0.4vw);
+    font-size: clamp(10px, 1.4vw, 14px);
     letter-spacing: 1.5px; 
 }
 
@@ -196,7 +196,7 @@ form .action input[type="submit"]:hover {
     list-style: none;
     margin: 10px 6px;
     font-weight: 500;
-    font-size:calc(10px + 0.5vw);
+    font-size: clamp(10px, 1.4vw, 16px);
 
 }
 
@@ -257,28 +257,28 @@ form .action input[type="submit"]:hover {
 }
 
 #t1 {
-    /* font-size: 1.3vw; */
-    font-size:calc(12px + 0.4vw);
+    font-size: clamp(12px, 1.4vw, 18px);
 }
 
 #t2 {
-    font-size:calc(28px + 1.5vw);
+    font-size: clamp(36px, 3.5vw, 60px);
 }
 
 #t3 {
-    font-size:calc(42px + 1.5vw);
+    font-size: clamp(48px, 7vw, 68px);
+
 }
 
 #landing #landing-content #landing-col2{
     position: absolute;
     top: 50%;
-    right: 0%;
+    right: 1%;
     transform: translate(-50%,-50%);
     text-align: left;
 }
 
 #landing #landing-logo {
-    font-size: 5vw;
+    font-size: clamp(36px, 3.5vw, 60px);
 }
 
 #landing #landing-line-height {
@@ -382,25 +382,24 @@ footer {
     }
 
     #landing-text {
-        margin-bottom: 1%;
+        margin-bottom: 2%;
     }
 
 }
 
 @media screen and (max-width: 475px) {
-    #landing #landing-content #landing-col2{
-        display: none;
-    }
-
     #landing #landing-content #landing-col1{
         white-space: normal;
-        line-height: 1; 
     }
     #landing-text {
-        margin-bottom: 5px;
+        margin-bottom: 12px;
     }
 
 }
+
+
+
+/* media queries for contact page */
 
 @media screen and (max-width: 500px){
 
