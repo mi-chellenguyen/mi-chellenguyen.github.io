@@ -16,6 +16,262 @@ section {
     min-height: 0;
 }
 
+
+
+/* NAV BAR  */
+
+.logo {
+    padding-top: 12px;
+    float: left;
+    font-size: clamp(10px, 1.4vw, 16px);
+}
+
+.toggle-button {
+    border: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background-color: #262626;
+}
+
+.toggle-button .bar {
+    height: 1px;
+    width:90%;
+    background: #ffffff;
+}
+
+.navbar-links ul{
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+    margin: 10px 6px;
+    font-weight: 500;
+    font-size: clamp(10px, 1.4vw, 16px);
+
+}
+
+.navbar-links li a:hover {
+    background-color: #ffffff;
+    color: #262626;
+}
+
+#navbar .logo a, .navbar-links li a{
+    display: block;
+    text-align: center;
+    padding: 8px 15px;
+    color:#ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    border: none;
+    /* border-radius: 30px; */
+}
+
+#navbar {
+    display: flex;
+    position: absolute;
+    left:0;
+    right:0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+
+
+
+/* LANDING PAGE  */
+
+#landing {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #262626;
+}
+
+#landing-text {
+    margin-bottom: 3%;
+}
+
+#landing #particles-js {
+    width: 100%;
+    height: 100vh;
+}
+
+#landing #landing-content #landing-col1{
+    position: absolute;
+    top: 50%;
+    left: 350px;
+    transform: translate(-50%,-50%);
+    text-align: left;
+    white-space: nowrap;
+}
+
+#t1 {
+    font-size: clamp(12px, 1.4vw, 18px);
+}
+
+#t2 {
+    font-size: clamp(36px, 3.5vw, 54px);
+}
+
+#t3 {
+    font-size: clamp(48px, 4.5vw, 64px);
+}
+
+/* call to action button */
+.cta-button {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    text-align: center;
+    padding: 1.5% 2%;
+    text-decoration: none;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    /* border-radius: 30px; */
+    font-family: 'Montserrat', sans-serif;
+    padding: 1.5% 3%;
+    font-size: clamp(10px, 1.4vw, 14px);
+    letter-spacing: 1.5px; 
+}
+
+.cta-button:hover {
+    color: #262626;
+    background-color: #ffffff;
+}
+
+#landing #landing-content #landing-col2{
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+}
+
+#landing #landing-logo {
+    font-size: clamp(36px, 3.5vw, 60px);
+}
+
+#landing #landing-line-height {
+    line-height: 0.95;
+}
+
+.scroll-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+
+.mouse-indicator {
+    display: flex;
+    width: 20px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+.mouse-indicator span {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+    animation: move-mouse-wheel 1s linear infinite;
+}
+
+.arrow-indicator span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid transparent;
+    border-right-color: white;
+    border-bottom-color: white;
+    transform: rotate(45deg);
+    animation: blink-arrow 0.5s alternate infinite;
+}
+
+@keyframes move-mouse-wheel {
+    0% {
+        opacity: 0;
+        transform: translateY(-7px);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translateY(7px);
+    }
+}
+
+@keyframes blink-arrow {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* ABOUT PAGE */
+
+#about {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #363636;
+}
+
+
+
+/* PROJECTS PAGE */
+
+#projects {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #464646;
+}
+
+
+
+/* CONTACT PAGE */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background: #262626;
+    box-sizing: border-box;
+}
+
+/* FORM ON CONTACT PAGE */
+
 form {
     /* background: rgba(27,31,34,0.6); */
     width: 640px;
@@ -140,175 +396,6 @@ form .action input[type="submit"]:hover {
     }
 }
 
-.logo {
-    padding-top: 12px;
-    float: left;
-    font-size: clamp(10px, 1.4vw, 16px);
-}
-
-.toggle-button {
-    border: 0;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-    background-color: #262626;
-}
-
-.toggle-button .bar {
-    height: 1px;
-    width:90%;
-    background: #ffffff;
-    /* border-radius: 20px; */
-}
-
-.cta-button {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #ffffff;
-    text-align: center;
-    padding: 1.5% 2%;
-    text-decoration: none;
-    transition: 0.3s;
-    transition-timing-function: ease-in-out;
-    /* border-radius: 30px; */
-    font-family: 'Montserrat', sans-serif;
-    padding: 1.5% 3%;
-    font-size: clamp(10px, 1.4vw, 14px);
-    letter-spacing: 1.5px; 
-}
-
-.cta-button:hover {
-    color: #262626;
-    background-color: #ffffff;
-}
-
-
-.navbar-links ul{
-    display: flex;
-}
-
-.navbar-links li {
-    list-style: none;
-    margin: 10px 6px;
-    font-weight: 500;
-    font-size: clamp(10px, 1.4vw, 16px);
-
-}
-
-.navbar-links li a:hover {
-    background-color: #ffffff;
-    color: #262626;
-}
-
-#navbar .logo a, .navbar-links li a{
-    display: block;
-    text-align: center;
-    padding: 8px 15px;
-    color:#ffffff;
-    text-decoration: none;
-    transition: 0.3s;
-    transition-timing-function: ease-in-out;
-    border: none;
-    /* border-radius: 30px; */
-}
-
-#navbar {
-    display: flex;
-    position: absolute;
-    left:0;
-    right:0;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    letter-spacing: 2px;
-    z-index: 2;
-}
-
-#landing {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #262626;
-}
-
-#landing-text {
-    margin-bottom: 3%;
-}
-
-#landing #particles-js {
-    width: 100%;
-    height: 100vh;
-}
-
-#landing #landing-content #landing-col1{
-    position: absolute;
-    top: 50%;
-    left: 350px;
-    transform: translate(-50%,-50%);
-    text-align: left;
-    white-space: nowrap;
-}
-
-#t1 {
-    font-size: clamp(12px, 1.4vw, 18px);
-}
-
-#t2 {
-    font-size: clamp(36px, 3.5vw, 60px);
-}
-
-#t3 {
-    font-size: clamp(48px, 7vw, 68px);
-
-}
-
-#landing #landing-content #landing-col2{
-    position: absolute;
-    top: 50%;
-    right: 1%;
-    transform: translate(-50%,-50%);
-    text-align: left;
-}
-
-#landing #landing-logo {
-    font-size: clamp(36px, 3.5vw, 60px);
-}
-
-#landing #landing-line-height {
-    line-height: 0.95;
-}
-
-
-#about {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #363636;
-}
-
-#projects {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #464646;
-}
-
-#contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    background: #262626;
-    box-sizing: border-box;
-}
-
 footer {
     display: none;
     justify-content: center;
@@ -320,6 +407,9 @@ footer {
 
 }
 
+
+
+/* media queries for nav bar */
 @media screen and (max-width: 600px) {
     .logo, 
     .navbar-links li {
@@ -370,6 +460,10 @@ footer {
     }
 
 }
+
+
+
+/* media queries for landing page */
 
 @media screen and (max-width: 767px) {
     #landing #landing-content #landing-col2{
