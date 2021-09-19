@@ -20,6 +20,20 @@ section {
 
 /* NAV BAR  */
 
+#navbar {
+    display: flex;
+    position: fixed;
+    left:0;
+    right:0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+
 .logo {
     padding-top: 12px;
     float: left;
@@ -29,13 +43,13 @@ section {
 .toggle-button {
     border: 0;
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 20px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 20px;
+    width: clamp(18px, 1.4vw, 30px);
+    height: clamp(14px, 1.4vw, 20px);
     background-color: #262626;
 }
 
@@ -74,20 +88,6 @@ section {
     /* border-radius: 30px; */
 }
 
-#navbar {
-    display: flex;
-    position: absolute;
-    left:0;
-    right:0;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    letter-spacing: 2px;
-    z-index: 2;
-}
-
 
 
 /* LANDING PAGE  */
@@ -108,17 +108,26 @@ section {
     height: 100vh;
 }
 
-#landing #landing-content #landing-col1{
+#landing #landing-col1{
     position: absolute;
     top: 50%;
-    left: 350px;
-    transform: translate(-50%,-50%);
+    /* left: 350px; */
+    left: 10%;
+    transform: translate(0%,-50%);
     text-align: left;
     white-space: nowrap;
 }
 
+#landing #landing-col2{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(0%,-50%);
+    text-align: left;
+}
+
 #t1 {
-    font-size: clamp(12px, 1.4vw, 18px);
+    font-size: clamp(14px, 1.4vw, 20px);
 }
 
 #t2 {
@@ -149,14 +158,6 @@ section {
 .cta-button:hover {
     color: #262626;
     background-color: #ffffff;
-}
-
-#landing #landing-content #landing-col2{
-    position: absolute;
-    top: 50%;
-    right: 1%;
-    transform: translate(-50%,-50%);
-    text-align: left;
 }
 
 #landing #landing-logo {
@@ -239,12 +240,85 @@ section {
 /* ABOUT PAGE */
 
 #about {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative;
+    text-align: left;
     background: #363636;
+    height: fit-content;
+    max-height: 100vh;
 }
 
+#about .title {
+    padding-top: 5%;
+    text-align: center;
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 1px;
+}
+
+#about .about-content {
+    display: flex;
+    padding: 0 5%;
+    padding-bottom: 100px;
+}
+#about #text {
+    font-family: 'Montserrat', sans-serif;
+    width: 50%;
+    padding: 5% 2%;
+    font-size: clamp(12px, 1.2vw, 16px);
+    letter-spacing: 1px;
+    line-height: 1.5;
+    height: fit-content;
+}
+
+.skills-container {
+    justify-content: space-between;
+    text-align: center;
+    /* border: 1px solid white; */
+    height: 50vh;
+    width: 50%;
+    padding: 5% 2%;
+    height: fit-content;
+}
+
+.skill {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: clamp(12px, 1.2vw, 16px);
+    border: 1px solid white;
+    padding: 5px 16px;
+    margin: 8px;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.skill:hover {
+    cursor: pointer;
+    color: #262626;
+    background-color: white;
+}
+
+.about-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.about-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 75px;
+}
+
+.about-divider .shape-fill {
+    fill: #262626;
+}
 
 
 /* PROJECTS PAGE */
@@ -253,7 +327,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #464646;
+    background: #262626;
 }
 
 
@@ -277,7 +351,6 @@ form {
     max-height: 100vh;
     margin: auto;
     /* border-radius: 5px; */
-    padding: auto;
     overflow-y: auto;
 }
 
@@ -460,16 +533,34 @@ footer {
 }
 
 
+/* media queries for about page */
+@media screen and (max-width: 567px) {
+    .skills-container {
+        width: 100%;
+    }
+
+    #about #text {
+        width: 100%;
+        text-align: center;
+    }
+
+    #about .about-content {
+        display: block;
+    }
+}
+    
+
 
 /* media queries for landing page */
 
 @media screen and (max-width: 767px) {
-    #landing #landing-content #landing-col2{
+    #landing #landing-col2{
         display: none;
     }
 
-    #landing #landing-content #landing-col1{
-        left: 50%; 
+    #landing #landing-col1{
+        left: 50%;
+        transform: translate(-50%,-50%);
         line-height: 1.5; 
     }
 
@@ -480,7 +571,7 @@ footer {
 }
 
 @media screen and (max-width: 475px) {
-    #landing #landing-content #landing-col1{
+    #landing #landing-col1{
         white-space: normal;
     }
     #landing-text {
