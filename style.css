@@ -11,7 +11,6 @@
 
 section {
     width: 100%;
-    height: 100vh;
     font-family: 'Playfair Display', serif;
     min-height: 0;
 }
@@ -31,7 +30,7 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     letter-spacing: 2px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .logo {
@@ -96,6 +95,7 @@ section {
     align-items: center;
     text-align: center;
     background: #262626;
+    height: 100vh;
 }
 
 #landing-text {
@@ -261,7 +261,7 @@ section {
 #about .about-text {
     font-family: 'Montserrat', sans-serif;
     width: 50%;
-    padding: 4% 2%;
+    padding: 4% 3%;
     font-size: clamp(10px, 1.2vw, 16px);
     letter-spacing: 0.8px;
     line-height: 1.5;
@@ -325,7 +325,7 @@ section {
     transition-timing-function: ease-in-out;
     font-family: 'Montserrat', sans-serif;
     padding: 1.5% 3%;
-    font-size: clamp(9px, 1.2vw, 14px);
+    font-size: clamp(9px, 1.1vw, 12px);
     letter-spacing: 1.2px; 
     font-weight: 500;
 }
@@ -335,7 +335,6 @@ section {
     color: #262626;
     background-color: white;
 }
-
 
 #scroll-projects {
     position: absolute;
@@ -348,12 +347,12 @@ section {
 /* PROJECTS PAGE */
 
 #projects {
-    justify-content: center;
-    align-items: center;
     text-align: center;
     background: #363636;
+    height: fit-content;
     min-height: 100vh;
     max-height: fit-content;
+    overflow: auto;
 }
 
 #projects .title {
@@ -363,8 +362,125 @@ section {
     font-weight: 500;
     line-height: 0.9;
     letter-spacing: 1px;
+    margin-bottom: 2%;
 }
 
+.featured-project-list {
+    list-style-type: none;
+    margin: 0 10%;
+    padding: 0;
+}
+
+.featured-project-li{
+    /* border: 1px dashed orange; */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.project-content {
+    position: relative;
+    grid-area: 1 / 6 / -1 / -1;
+    text-align: right;
+    z-index: 2;
+    margin: 20px 0px;
+}
+
+.overline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.project-title {
+    font-size: 24px;
+    margin: 5px 0px 15px 0px;
+    line-height: 0.9;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.project-description {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px white solid;
+    background-color: rgb(38, 38, 38, 0.7);
+    padding: 20px 14px;
+    line-height: 1.5;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.project-description:hover {
+    transform: translate(-5px,-5px);
+    background-color: rgb(38, 38, 38);
+}
+.tech-list {
+    list-style-type: none;
+    margin: 15px 0px;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.tech-list li {
+    display: inline;
+    border: 1px solid white;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin: 0px 3px;
+}
+
+.project-image {
+    grid-area: 1 / 1 / -1 / 7;
+    position: relative;
+    z-index: 1;
+}
+
+.project-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.project-image2 {
+    grid-area: 1 / 6 / -1 / -1;
+    position: relative;
+    z-index: 1;
+}
+
+.project-image2 img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.project-content2 {
+    position: relative;
+    grid-area: 1 / 1 / -1 / 7;
+    text-align: left;
+    z-index: 2;
+    margin: 20px 0px;
+}
+
+.project-description2 {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px white solid;
+    background-color: rgb(38, 38, 38, 0.7);
+    padding: 20px 14px;
+    line-height: 1.5;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.project-description2:hover {
+    transform: translate(5px,-5px);
+    background-color: rgb(38, 38, 38);
+}
 
 
 /* CONTACT PAGE */
@@ -473,15 +589,96 @@ form .action input[type="submit"]:hover {
     color: black;
 }
 
+.email-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 3%;
+}
+
+.email-wrapper a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 14px;
+    writing-mode: vertical-lr;
+    transition: 0.3s ease-in-out;
+    padding-bottom: 2px;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.email-wrapper a:hover {
+    padding-bottom: 12px;
+}
+
+.email-wrapper::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    margin: 0px auto;
+    background-color: white;
+}
+
+.social-wrapper ul {
+    list-style-type: none;
+    padding-bottom: 6px;
+    text-align: center;
+}
+
+.social-wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 2%;
+}
+
+.social-wrapper li img{
+    height: 28px;
+    width: 28px;
+    margin: 6px;
+    transition: 0.3s ease-in-out;
+}
+
+.social-wrapper li img:hover{
+    transform: translateY(-5px);
+}
+
+
+.social-wrapper::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    margin: 0px auto;
+    background-color: white;
+}
+
 footer {
     display: none;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     width: 100%;
     font-family: 'Montserrat', sans-serif;
-    background: #666666;
+    background: black;
+    height: 60px;
+    padding: 5px;
 }
+
+footer a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin: 5px 0px;
+}
+
+footer li {
+    display: inline;
+    margin: px 3px;
+}
+
+footer li img{
+    display: inline;
+    width: 22px;
+    height: 22px;
+}
+
 
 
 
@@ -576,6 +773,17 @@ footer {
         margin-bottom: 2%;
     }
 
+    .email-wrapper {
+        display: none;
+    }
+    .social-wrapper {
+        display: none;
+    }
+
+    footer {
+        display: block;
+    }
+
 }
 
 @media screen and (max-width: 475px) {
@@ -588,7 +796,40 @@ footer {
 
 }
 
+/* media queries for projects page */
+@media screen and (max-width: 800px) {
+    .project-content {
+        grid-area: 1 / 1 / -1 / -1;
+        text-align: left;
+        background: rgb(38, 38, 38, 0.7);
+        margin: 0;
+        padding: 15px;
+    }
+    
+    .project-image {
+        grid-area: 1 / 1 / -1 / -1;
+    }
 
+    .project-content2 {
+        grid-area: 1 / 1 / -1 / -1;
+        background: rgb(38, 38, 38, 0.7);
+        margin: 0;
+        padding: 15px;
+    }
+    
+    .project-image2 {
+        grid-area: 1 / 1 / -1 / -1;
+    }
+
+    .tech-list {
+        line-height: 2;
+    }
+
+    .tech-list li {
+        margin: 10px 3px;
+    }
+
+}
 
 /* media queries for contact page */
 
