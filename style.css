@@ -155,7 +155,8 @@ section {
 }
 
 #landing #landing-logo {
-    font-size: clamp(36px, 3.5vw, 60px);
+    font-size: clamp(200px, 20vw, 400px);
+    font-weight: 400;
 }
 
 #landing #landing-line-height {
