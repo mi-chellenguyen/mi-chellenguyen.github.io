@@ -433,6 +433,16 @@ section {
     margin: 0px 3px;
 }
 
+.project-links img {
+    height: 28px;
+    width: 28px;
+    transition: 0.3s ease-in-out;
+}
+
+.project-links img:hover {
+    transform: translateY(-5px);
+}
+
 .project-image {
     grid-area: 1 / 1 / -1 / 7;
     position: relative;
