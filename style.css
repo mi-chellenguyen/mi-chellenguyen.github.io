@@ -428,9 +428,11 @@ section {
 .tech-list li {
     display: inline;
     border: 1px solid white;
+    background: white;
     padding: 4px 8px;
     font-size: 12px;
     margin: 0px 3px;
+    color:#363636;
 }
 
 .project-links img {
