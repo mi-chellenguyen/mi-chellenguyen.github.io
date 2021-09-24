@@ -242,13 +242,13 @@ section {
 #about {
     position: relative;
     text-align: left;
-    background: #363636;
+    background: #262626;
     height: fit-content;
     max-height: 100vh;
 }
 
 #about .title {
-    padding-top: 5%;
+    padding-top: 8%;
     text-align: center;
     font-size: clamp(32px, 3vw, 48px);
     font-weight: 500;
@@ -258,16 +258,19 @@ section {
 
 #about .about-content {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0 5%;
     padding-bottom: 100px;
 }
-#about #text {
+#about .about-text {
     font-family: 'Montserrat', sans-serif;
     width: 50%;
     padding: 5% 2%;
-    font-size: clamp(12px, 1.2vw, 16px);
-    letter-spacing: 1px;
+    font-size: clamp(10px, 1.2vw, 16px);
+    letter-spacing: 0.8px;
     line-height: 1.5;
+    font-weight: 300;
     height: fit-content;
 }
 
@@ -284,7 +287,7 @@ section {
 .skill {
     display: inline-block;
     font-family: 'Montserrat', sans-serif; 
-    font-size: clamp(12px, 1.2vw, 16px);
+    font-size: clamp(10px, 1.2vw, 16px);
     border: 1px solid white;
     padding: 5px 16px;
     margin: 8px;
@@ -317,7 +320,14 @@ section {
 }
 
 .about-divider .shape-fill {
-    fill: #262626;
+    fill: #363636;
+}
+
+#scroll-projects {
+    position: absolute;
+    bottom: 5%;
+    left: 49.5%;
+    z-index: 2;
 }
 
 
@@ -327,7 +337,16 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: #262626;
+    background: #363636;
+}
+
+#projects .title {
+    padding-top: 5%;
+    text-align: center;
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 1px;
 }
 
 
@@ -535,11 +554,14 @@ footer {
 
 /* media queries for about page */
 @media screen and (max-width: 567px) {
+    #about .title {
+        padding-top: 18%;
+    }
     .skills-container {
         width: 100%;
     }
 
-    #about #text {
+    #about .about-text {
         width: 100%;
         text-align: center;
     }
