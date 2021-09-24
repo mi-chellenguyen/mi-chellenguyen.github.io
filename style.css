@@ -140,11 +140,8 @@ section {
 
 /* call to action button */
 .cta-button {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #ffffff;
+    border: 1px solid white;
     text-align: center;
-    padding: 1.5% 2%;
     text-decoration: none;
     transition: 0.3s;
     transition-timing-function: ease-in-out;
@@ -244,7 +241,8 @@ section {
     text-align: left;
     background: #262626;
     height: fit-content;
-    max-height: 100vh;
+    min-height: 100vh;
+    max-height: fit-content;
 }
 
 #about .title {
@@ -261,12 +259,12 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 5%;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
 }
 #about .about-text {
     font-family: 'Montserrat', sans-serif;
     width: 50%;
-    padding: 5% 2%;
+    padding: 4% 2%;
     font-size: clamp(10px, 1.2vw, 16px);
     letter-spacing: 0.8px;
     line-height: 1.5;
@@ -280,7 +278,7 @@ section {
     /* border: 1px solid white; */
     height: 50vh;
     width: 50%;
-    padding: 5% 2%;
+    padding: 4% 2%;
     height: fit-content;
 }
 
@@ -323,6 +321,26 @@ section {
     fill: #363636;
 }
 
+#resume-download {
+    border: 1px solid white;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1.5% 3%;
+    font-size: clamp(9px, 1.2vw, 14px);
+    letter-spacing: 1.2px; 
+    font-weight: 500;
+}
+
+#resume-download:hover {
+    cursor: pointer;
+    color: #262626;
+    background-color: white;
+}
+
+
 #scroll-projects {
     position: absolute;
     bottom: 5%;
@@ -338,6 +356,8 @@ section {
     align-items: center;
     text-align: center;
     background: #363636;
+    min-height: 100vh;
+    max-height: fit-content;
 }
 
 #projects .title {
@@ -353,33 +373,38 @@ section {
 
 /* CONTACT PAGE */
 #contact {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     background: #262626;
     box-sizing: border-box;
+    min-height: 100vh;
+    max-height: fit-content;
+}
+
+#contact .title{
+    font-family: 'Playfair Display', serif;
+    padding-top: 8%;
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-bottom: 6px; 
+    margin-bottom: 30px;
+
 }
 
 /* FORM ON CONTACT PAGE */
 
 form {
     /* background: rgba(27,31,34,0.6); */
+    font-family: 'Montserrat', sans-serif;
     width: 640px;
     max-width: 95%;
-    max-height: 100vh;
+    max-height: fit-content;
     margin: auto;
     /* border-radius: 5px; */
     overflow-y: auto;
-}
-
-form .title h1 {
-    font-weight: normal;
-    letter-spacing: 2px;
-    border-bottom: 1px solid white;
-    display: inline-block;
-    padding-bottom: 6px; 
-    margin-bottom: 30px;
 }
 
 form .half {
