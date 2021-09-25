@@ -406,8 +406,8 @@ section {
 
 .project-description {
     font-family: 'Montserrat', sans-serif;
-    border: 1px white solid;
-    background-color: rgb(38, 38, 38, 0.7);
+    /* border: 1px white solid; */
+    background-color: rgb(38, 38, 38, 0.8);
     padding: 20px 14px;
     line-height: 1.5;
     font-size: 14px;
@@ -420,6 +420,7 @@ section {
     transform: translate(-5px,-5px);
     background-color: rgb(38, 38, 38);
 }
+
 .tech-list {
     list-style-type: none;
     margin: 15px 0px;
@@ -480,7 +481,7 @@ section {
 
 .project-description2 {
     font-family: 'Montserrat', sans-serif;
-    border: 1px white solid;
+    /* border: 1px white solid; */
     background-color: rgb(38, 38, 38, 0.7);
     padding: 20px 14px;
     line-height: 1.5;
