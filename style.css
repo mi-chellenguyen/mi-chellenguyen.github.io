@@ -685,16 +685,23 @@ footer {
     padding: 5px;
 }
 
+footer ul {
+    margin: 6px;
+}
+
 footer a {
     text-decoration: none;
     letter-spacing: 2px;
     font-size: 12px;
-    margin: 5px 0px;
+}
+
+footer a:hover{
+    font-weight: bold;
 }
 
 footer li {
     display: inline;
-    margin: px 3px;
+    margin: 0px 3px;
 }
 
 footer li img{
@@ -703,7 +710,10 @@ footer li img{
     height: 22px;
 }
 
-
+footer li img:hover{
+    transform: translateY(-5px);
+    transition: 0.3s ease-in-out;
+}
 
 
 /* media queries for nav bar */
