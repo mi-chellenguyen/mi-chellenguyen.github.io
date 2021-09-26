@@ -31,12 +31,14 @@ section {
     font-weight: 500;
     letter-spacing: 2px;
     z-index: 3;
+    transition: 0.75s ease-out;
 }
 
 .logo {
-    padding-top: 12px;
+    padding-top: 10px;
     float: left;
     font-size: clamp(10px, 1.4vw, 16px);
+    line-height: 0;
 }
 
 .toggle-button {
@@ -357,7 +359,7 @@ section {
 }
 
 #projects .title {
-    padding-top: 5%;
+    padding-top: 8%;
     text-align: center;
     font-size: clamp(32px, 3vw, 48px);
     font-weight: 500;
@@ -400,25 +402,28 @@ section {
     font-size: 24px;
     margin: 5px 0px 15px 0px;
     line-height: 0.9;
-    letter-spacing: 1px;
-    font-weight: 500;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .project-description {
     font-family: 'Montserrat', sans-serif;
     /* border: 1px white solid; */
     background-color: rgb(38, 38, 38, 0.8);
+    box-shadow: 3px 3px 3px rgb(38, 38, 38);
     padding: 20px 14px;
     line-height: 1.5;
     font-size: 14px;
     letter-spacing: 0.8px;
     font-weight: 300;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .project-description:hover {
     transform: translate(-5px,-5px);
     background-color: rgb(38, 38, 38);
+    box-shadow: 5px 5px 5px rgb(38, 38, 38);
 }
 
 .tech-list {
@@ -435,6 +440,8 @@ section {
     font-size: 12px;
     margin: 0px 3px;
     color:#363636;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
 .project-links img {
@@ -483,17 +490,20 @@ section {
     font-family: 'Montserrat', sans-serif;
     /* border: 1px white solid; */
     background-color: rgb(38, 38, 38, 0.8);
+    box-shadow: -3px 3px 3px rgb(38, 38, 38);
     padding: 20px 14px;
     line-height: 1.5;
     font-size: 14px;
     letter-spacing: 0.8px;
     font-weight: 300;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .project-description2:hover {
     transform: translate(5px,-5px);
     background-color: rgb(38, 38, 38);
+    box-shadow: -5px 5px 5px rgb(38, 38, 38);
 }
 
 
@@ -698,8 +708,12 @@ footer li img{
 
 /* media queries for nav bar */
 @media screen and (max-width: 600px) {
-    .logo, 
-    .navbar-links li {
+
+    .logo {
+        margin: 10px 0px 20px 0px;
+    }
+
+    .logo, .navbar-links li {
         float: none;
     }
 
@@ -711,7 +725,6 @@ footer li img{
         flex-direction: column;
         align-items: flex-start;
         align-items: center;
-        background: rgba(27,31,34,0.50);
     }
 
     #navbar .logo a {
