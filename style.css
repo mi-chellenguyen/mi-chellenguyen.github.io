@@ -320,7 +320,7 @@ section {
     fill: #363636;
 }
 
-#resume-download {
+#resume {
     border: 1px solid white;
     text-align: center;
     text-decoration: none;
@@ -333,7 +333,7 @@ section {
     font-weight: 500;
 }
 
-#resume-download:hover {
+#resume:hover {
     cursor: pointer;
     color: #262626;
     background-color: white;
