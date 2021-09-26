@@ -363,7 +363,6 @@ section {
     text-align: center;
     font-size: clamp(32px, 3vw, 48px);
     font-weight: 500;
-    line-height: 0.9;
     letter-spacing: 1px;
     margin-bottom: 2%;
 }
@@ -718,7 +717,6 @@ footer li img:hover{
 
 /* media queries for nav bar */
 @media screen and (max-width: 600px) {
-
     .logo {
         margin: 14px 0px 20px 0px;
     }
@@ -779,14 +777,14 @@ footer li img:hover{
         display: block;
     }
 
+    #about .title, #projects .title, #contact .title {
+        padding-top: 15%;
+    }
 }
 
 
 /* media queries for about page */
 @media screen and (max-width: 567px) {
-    #about .title {
-        padding-top: 18%;
-    }
     .skills-container {
         width: 100%;
     }
