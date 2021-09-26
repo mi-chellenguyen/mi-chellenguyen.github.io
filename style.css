@@ -720,7 +720,7 @@ footer li img:hover{
 @media screen and (max-width: 600px) {
 
     .logo {
-        margin: 10px 0px 20px 0px;
+        margin: 14px 0px 20px 0px;
     }
 
     .logo, .navbar-links li {
@@ -765,8 +765,18 @@ footer li img:hover{
         display: none;
     }
 
+    .x-toggle {
+        display: none;
+        height: 20px;
+        width: 20px;
+    }
+
     .navbar-links.active {
         display: flex;
+    }
+
+    .x-toggle.active {
+        display: block;
     }
 
 }

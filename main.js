@@ -1,9 +1,11 @@
 // Hamburger menu toggle
 const toggleHamburgerButton = document.getElementsByClassName('toggle-button')[0]
 const navBarLinks = document.getElementsByClassName('navbar-links')[0]
+const xButton = document.getElementsByClassName('x-toggle')[0]
 
 toggleHamburgerButton.addEventListener("click",() => {
     navBarLinks.classList.toggle("active")
+    xButton.classList.toggle("active")
 })
 
 // Navbar animaton on scroll
@@ -21,13 +23,14 @@ window.addEventListener('scroll', function ( event ) {
     navBar.style.background = "none"
     navBar.style.transform = "translateY(-52.67px)"
     navBarLinks.classList.remove("active");
+    xButton.classList.remove("active");
 
 	// Set a timeout to run after scrolling ends
 	isScrolling = setTimeout(function() {
 
 		// Run the callback
         if (window.matchMedia('screen and (max-width:600px)').matches) {
-            navBar.style.background = "rgb(25, 25, 25, 0.5)"
+            navBar.style.background = "rgb(25, 25, 25, 0.7)"
         } 
         else {
             if (window.scrollY == 0 
