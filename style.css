@@ -35,10 +35,13 @@ section {
 }
 
 .logo {
-    padding-top: 10px;
+    padding: 10px 0px;
     float: left;
-    font-size: clamp(10px, 1.4vw, 16px);
-    line-height: 0;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
 }
 
 .toggle-button {
@@ -77,7 +80,7 @@ section {
     color: #262626;
 }
 
-#navbar .logo a, .navbar-links li a{
+.navbar-links li a{
     display: block;
     text-align: center;
     padding: 8px 15px;
@@ -121,7 +124,7 @@ section {
 #landing #landing-col2{
     position: absolute;
     top: 50%;
-    right: 10%;
+    right: 12%;
     transform: translate(0%,-50%);
     text-align: left;
 }
@@ -156,13 +159,18 @@ section {
     background-color: #ffffff;
 }
 
-#landing #landing-logo {
+/* #landing #landing-logo {
     font-size: clamp(200px, 20vw, 400px);
     font-weight: 400;
-}
+} */
 
 #landing #landing-line-height {
     line-height: 0.95;
+}
+
+.m-logo-landing {
+    height: clamp(180px, 24w, 320px);
+    width: clamp(180px, 24vw, 320px);
 }
 
 .scroll-container {
@@ -717,8 +725,13 @@ footer li img:hover{
 
 /* media queries for nav bar */
 @media screen and (max-width: 600px) {
-    .logo {
-        margin: 14px 0px 20px 0px;
+    /* .logo {
+        padding: 2px;
+    } */
+
+    .logo img {
+        height: 28px;
+        width: 28px;
     }
 
     .logo, .navbar-links li {
@@ -783,27 +796,10 @@ footer li img:hover{
 }
 
 
-/* media queries for about page */
-@media screen and (max-width: 567px) {
-    .skills-container {
-        width: 100%;
-    }
-
-    #about .about-text {
-        width: 100%;
-        text-align: center;
-    }
-
-    #about .about-content {
-        display: block;
-    }
-}
-    
-
 
 /* media queries for landing page */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
     #landing #landing-col2{
         display: none;
     }
@@ -840,6 +836,26 @@ footer li img:hover{
     }
 
 }
+
+
+
+/* media queries for about page */
+@media screen and (max-width: 567px) {
+    .skills-container {
+        width: 100%;
+    }
+
+    #about .about-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    #about .about-content {
+        display: block;
+    }
+}
+    
+
 
 /* media queries for projects page */
 @media screen and (max-width: 800px) {
