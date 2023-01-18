@@ -723,6 +723,17 @@ footer li img:hover{
 }
 
 
+/* PAGE LOAD  */
+.hidden {
+    opacity: 0;
+}
+  
+.visible {
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+
 /* media queries for nav bar */
 @media screen and (max-width: 600px) {
     /* .logo {
