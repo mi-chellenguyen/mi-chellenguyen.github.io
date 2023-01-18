@@ -375,7 +375,16 @@ section {
     margin-bottom: 2%;
 }
 
-.featured-project-list {
+#projects .sub-title {
+    padding-top: 6%;
+    text-align: center;
+    font-size: clamp(28px, 2vw, 44px);
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 2%;
+}
+
+.featured-project-list, .noteworthy-project-list {
     list-style-type: none;
     margin: 0 10%;
     padding: 0;
